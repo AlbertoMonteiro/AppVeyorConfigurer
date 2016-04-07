@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppVeyorConfigurer", "AppVeyorConfigurer\AppVeyorConfigurer.csproj", "{00E332AC-4BBD-4E72-91F3-56B78562C492}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppVeyorConfigurer", "src\AppVeyorConfigurer\AppVeyorConfigurer.csproj", "{00E332AC-4BBD-4E72-91F3-56B78562C492}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
