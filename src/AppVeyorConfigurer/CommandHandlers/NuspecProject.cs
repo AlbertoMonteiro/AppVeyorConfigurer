@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml.Linq;
 using DocoptNet;
@@ -44,6 +45,8 @@ namespace AppVeyorConfigurer.CommandHandlers
                 csprojFullPath = Combine(GetDirectoryName(Combine(CurrentDirectory, arguments["<sln>"].ToString())), csprojPath);
                 if (File.Exists(csprojFullPath))
                     SaveNuspec(csprojFullPath, nuspec);
+                else
+                    Console.WriteLine($"Couldn't create nuspec because {csprojFullPath} was not found.");
             }
         }
 
@@ -52,6 +55,7 @@ namespace AppVeyorConfigurer.CommandHandlers
             var csProjLocation = GetDirectoryName(csprojFullPath);
             var nuspecPath = Combine(csProjLocation, GetFileNameWithoutExtension(csprojFullPath) + ".nuspec");
             nuspec.Save(nuspecPath);
+            Console.WriteLine($"Created nuspec in {nuspecPath}");
         }
     }
 }

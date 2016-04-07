@@ -1,5 +1,4 @@
-﻿using System;
-using DocoptNet;
+﻿using DocoptNet;
 
 namespace AppVeyorConfigurer
 {
@@ -24,7 +23,6 @@ namespace AppVeyorConfigurer
             var arguments = new Docopt().Apply(USAGE, args, version: "AppVeyor Configurer", exit: true);
             IConfigurer configurer = new Configurer();
             configurer.Configure(arguments);
-            Console.ReadLine();
         }
     }
 }

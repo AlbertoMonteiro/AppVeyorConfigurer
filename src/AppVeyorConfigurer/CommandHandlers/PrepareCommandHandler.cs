@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using DocoptNet;
 using static System.Environment;
@@ -29,7 +30,9 @@ namespace AppVeyorConfigurer.CommandHandlers
             var nugetPath = Combine(GetDirectoryName(Combine(CurrentDirectory, arguments[CommandKeyValue].ToString())), ".nuget");
             CreateDirectory(nugetPath);
 
-            File.AppendAllText(Combine(nugetPath, "packages.config"), PACKAGES_CONFIG_CONTENT);
+            var packagesConfigPath = Combine(nugetPath, "packages.config");
+            File.AppendAllText(packagesConfigPath, PACKAGES_CONFIG_CONTENT);
+            Console.WriteLine($"Created packages.config in {packagesConfigPath}");
         }
     }
 }
