@@ -31,7 +31,7 @@ namespace AppVeyorConfigurer.CommandHandlers
             CreateDirectory(nugetPath);
 
             var packagesConfigPath = Combine(nugetPath, "packages.config");
-            File.AppendAllText(packagesConfigPath, PACKAGES_CONFIG_CONTENT);
+            File.WriteAllText(packagesConfigPath, PACKAGES_CONFIG_CONTENT);
             Console.WriteLine($"Created packages.config in {packagesConfigPath}");
         }
     }

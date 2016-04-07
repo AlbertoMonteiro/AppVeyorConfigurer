@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandHandlers\BaseCommandHandler.cs" />
+    <Compile Include="CommandHandlers\CreateRunTestWithCoverageBatBaseCommandHandler.cs" />
     <Compile Include="CommandHandlers\ICommandHandler.cs" />
     <Compile Include="CommandHandlers\NuspecProject.cs" />
     <Compile Include="CommandHandlers\PrepareCommandHandler.cs" />
